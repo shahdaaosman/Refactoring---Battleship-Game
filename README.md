@@ -22,8 +22,10 @@ Refactoring 8: rename Player class to HumanPlayer.java line 14
 <p>The main refactoring was built by using Template pattern:</p>
   <p>1-Template Design Pattern.</p>
   The Template Method defines a skeleton of an algorithm in an operation, and defers some steps to subclasses. 
+  
   <p>2-Singelton Design Pattern.</p>
   This design pattern help to Ensure that game class has only one instance, and provide a global point of access to it.
+  
   <p>3-Simple Factory Design Pattern.</p>
   This allows interfaces for creating objects without exposing the object creation logic to the client.
 
