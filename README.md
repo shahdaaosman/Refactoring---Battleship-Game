@@ -1,21 +1,42 @@
-# Project Template
+# Refactoring - Battleship Game
 
-This is a Java Maven Project Template
+This project is a refactoring for the Battleship Game that was built in Assignment 3
 
+Refactoring 1: change the implementation of play method to getAwinner method NewGame.java line 73
 
-# How to compile the project
+Refactoring 2: remove duplicated code that check for existing shoot in Board.java line 86
 
+Refactoring 3: Extract method by include all playing steps in playGame method NewGame.java line 78 & 90
 
-[![Build Status](https://travis-ci.org/kiat/JavaProjectTemplate.svg?branch=master)](https://travis-ci.org/kiat/JavaProjectTemplate)  
+Refactoring 4: add Gameplayer super class for player to extend player types NewGame.java line 43
 
-[![Coverage Status](https://coveralls.io/repos/github/kiat/JavaProjectTemplate/badge.svg?branch=master)](https://coveralls.io/github/kiat/JavaProjectTemplate?branch=master)
+Refactoring 5: move intiBoard() form Board.java to GamePlayer.java class GamePlayer.java line 39
 
-[![sonarcloud](https://sonarcloud.io/api/project_badges/measure?project=edu.bu.cs665%3AExample-1&metric=alert_status)](file:https://sonarcloud.io/api/project_badges/measure?project=edu.bu.cs665%3AExample-1&metric=alert_status)
+Refactoring 6: build Template pattern to let each game player follow game steps GamePlayer.java line 14
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+Refactoring 7: each game player have different shoot method ComputerPlayer.java line 12 HumanPlayer.java Line 27
 
+Refactoring 8: rename Player class to HumanPlayer.java line 14
 
-We use Apache Maven to compile and run this project. 
+# Features implemented
+<p>The main refactoring was built by using Template pattern:</p>
+  <p>1-Template Design Pattern.</p>
+  The Template Method defines a skeleton of an algorithm in an operation, and defers some steps to subclasses. 
+  <p>2-Singelton Design Pattern.</p>
+  This design pattern help to Ensure that game class has only one instance, and provide a global point of access to it.
+  <p>3-Simple Factory Design Pattern.</p>
+  This allows interfaces for creating objects without exposing the object creation logic to the client.
+
+# Implementation Details
+By Adding the Template pattern the game become Flexible to add any type of player
+and make sure that they all will follow the same steps for playing.
+it help to avoid duplication in the code: the general workflow structure is implemented once in the abstract class's algorithm, and necessary variations are implemented in the subclasses.
+Control at what points subclassing is allowed to do changes.
+
+# Getting Started
+
+This project built in a Java Maven Template and it
+use Apache Maven to compile and run. 
 
 You need to install Apache Maven (https://maven.apache.org/)  on your system. 
 
