@@ -67,7 +67,7 @@ public abstract class GamePlayer {
 	 */
 	public GamePlayer(int playerId) {
 		this.id = playerId;
-		Player.shoot = new int[2];
+		HumanPlayer.shoot = new int[2];
 		
 		
 	}
@@ -133,7 +133,8 @@ public abstract class GamePlayer {
 	 * 
 	 * @param shoot
 	 */
-	public static void shoot(int[] shoot){
+	public abstract void shoot(int[] shoot);
+	/*public static void shoot(int[] shoot){
         
 		while(true) {
 		// If the user enter a non integer number it throw an exception
@@ -157,12 +158,8 @@ public abstract class GamePlayer {
 		}
         break;
         
-		}
-
-
-
-        
-    }
+		}  
+    }*/
 	
 	/**
 	 * this method check if the shoot hit the ship 
@@ -250,7 +247,7 @@ public abstract class GamePlayer {
      * @param shoot
      * @param board
      */
-	public static void updateboard(int[] shoot, Board board){
+    private static void updateboard(int[] shoot, Board board){
     	int[][] theBoard =board.getBoard();
         if(hit(shoot,board))
         	 theBoard[shoot[0]][shoot[1]]=1;

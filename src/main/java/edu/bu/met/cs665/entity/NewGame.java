@@ -35,15 +35,16 @@ public class NewGame implements Game{
 	/**
 	 * this method used to start the game
 	 */
+	@Override
 	public void startGame() {
 		
 		
 		gameRules();
 		
 		//Refactoring : add Gameplayer super class for player to extend player type
-		GamePlayer player1 = new Player(1);
+		GamePlayer player1 = new HumanPlayer(1);
 		player1.intiBoard();
-		GamePlayer player2 = new Player(2);
+		GamePlayer player2 = new ComputerPlayer(2);
 		player2.intiBoard();
 		getAwinner(player1,player2);
 		player1.playGame();
@@ -70,6 +71,7 @@ public class NewGame implements Game{
 	/**
 	 * this method include the play process
 	 */
+	@Override
 	public void getAwinner(GamePlayer player1, GamePlayer player2) {
 		//play if no one win
 		while(!(player1.playerWin(player1.board) ||
@@ -105,6 +107,7 @@ public class NewGame implements Game{
 	/**
 	 * the method called when the game end
 	 */
+	@Override
 	public void GameEnd() {
 		
 		System.out.println("---------- Game over ------------");
