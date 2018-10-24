@@ -1,6 +1,6 @@
 # Refactoring - Battleship Game
 
-This project is a refactoring for the Battleship Game that was built in Assignment 3
+This project is a refactoring for the Battleship Game that was built here : https://github.com/shahdaaosman/Battleship-Game
 
 Refactoring 1: change the implementation of play method to getAwinner method NewGame.java line 73
 
